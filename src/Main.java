@@ -11,16 +11,51 @@ public class Main {
         while (userInput!=0){
 
              if (userInput==1) {
-                 StepTracker.stepTrackerMethod();
+                 System.out.println("За какой месяц вы хотите ввести шаги? 0-Январь, 1-Февраль...11-Декабрь");
+                 int month = scanner.nextInt();
+                 while (month<0 || month>11){
+                     System.out.println("Неверно введен месяц!");
+                     System.out.println("За какой месяц вы хотите ввести шаги? 0-Январь, 1-Февраль...11-Декабрь");
+                     month = scanner.nextInt();
+                 }
+                 System.out.println("За какой день вы хотите ввести шаги?");
+                 int day = scanner.nextInt()-1;
+                 while (day<0 || day>29){
+                     System.out.println("Неверно введен день! Введите дату от 1 до 30");
+                     System.out.println("За какой день вы хотите ввести шаги?");
+                     day = scanner.nextInt();
+                 }
+                 System.out.println("Введите количество шагов: ____");
+                 int steps = scanner.nextInt();
+                 while (steps<0){
+                     System.out.println("Отрицательное количество шагов недопустимо");
+                     System.out.println("Введите количество шагов: ____");
+                      steps = scanner.nextInt();
+                 }
+                // StepTracker.inputSteps(month,day,steps);
+
+             } else if (userInput==3){
+                 System.out.println("Введите новую цель");
+                 int newPoit= scanner.nextInt();
+
+                 while (newPoit<0){
+                     System.out.println("Отрицательное количество шагов недопустимо");
+                     System.out.println("Введите количество шагов для новой цели: ____");
+                     newPoit = scanner.nextInt();
+                 } StepTracker.changePoinSteps(newPoit);
              }
 
-                 else if ( userInput!=1  && userInput!=2  && userInput!=3 ) {
+              else if ( userInput!=1  && userInput!=2  && userInput!=3 ) {
                      System.out.println("Введите правильную команду !");
-                 }
-
-
+                 }else {
+                 System.out.println("За какой месяц вывести статистику?");
+                 int monthStatistic=scanner.nextInt();
+                 StepTracker.showStatistic(monthStatistic);
+             }
             printMenu();
             userInput=scanner.nextInt();
+
+
 
         }System.out.println("Программа завершена.");
 
