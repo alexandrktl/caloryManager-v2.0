@@ -32,7 +32,7 @@ public class Main {
                      System.out.println("Введите количество шагов: ____");
                       steps = scanner.nextInt();
                  }
-                // StepTracker.inputSteps(month,day,steps);
+                 StepTracker.inputSteps(month,day,steps);
 
              } else if (userInput==3){
                  System.out.println("Введите новую цель");
@@ -47,9 +47,14 @@ public class Main {
 
               else if ( userInput!=1  && userInput!=2  && userInput!=3 ) {
                      System.out.println("Введите правильную команду !");
-                 }else {
-                 System.out.println("За какой месяц вывести статистику?");
+                 }else {                                                             // Статистика
+                 System.out.println("За какой месяц вывести статистику? 0-Январь, 1-Февраль...11-Декабрь");
                  int monthStatistic=scanner.nextInt();
+                 while (monthStatistic<0 || monthStatistic>11){
+                     System.out.println("Неверно выбран месяц! ");
+                     System.out.println("За какой месяц вывести статистику? 0-Январь, 1-Февраль...11-Декабрь");
+                     monthStatistic = scanner.nextInt();
+                 }
                  StepTracker.showStatistic(monthStatistic);
              }
             printMenu();
