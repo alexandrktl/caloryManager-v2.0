@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2f1e04dd-2fd9-4311-bb18-5a235cd912e5" name="Changes" comment="первый коммит- до конца не пойму правильно ли создана основа- месяц с 30-ю днями , содержащими шаги. &#10;Куда писать метод ввода шагов ? В метод stepTrackerMethod или создать другой?">
+    <list default="true" id="2f1e04dd-2fd9-4311-bb18-5a235cd912e5" name="Changes" comment="коммит на проверку">
+      <change afterPath="$PROJECT_DIR$/src/Convertor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/StepTracker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/StepTracker.java" afterDir="false" />
@@ -35,13 +36,13 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Александр/IdeaProjects/caloryManager v2.0&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/Александр/IdeaProjects/caloryManager v2.0"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
@@ -72,7 +73,21 @@
       <option name="project" value="LOCAL" />
       <updated>1660511699148</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="не пойму в чем ошибка при вводе шагов в день месяца.">
+      <created>1662134349699</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1662134349699</updated>
+    </task>
+    <task id="LOCAL-00003" summary="коммит на проверку">
+      <created>1662280508412</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1662280508412</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -88,6 +103,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="первый коммит- до конца не пойму правильно ли создана основа- месяц с 30-ю днями , содержащими шаги. &#10;Куда писать метод ввода шагов ? В метод stepTrackerMethod или создать другой?" />
-    <option name="LAST_COMMIT_MESSAGE" value="первый коммит- до конца не пойму правильно ли создана основа- месяц с 30-ю днями , содержащими шаги. &#10;Куда писать метод ввода шагов ? В метод stepTrackerMethod или создать другой?" />
+    <MESSAGE value="не пойму в чем ошибка при вводе шагов в день месяца." />
+    <MESSAGE value="коммит на проверку" />
+    <option name="LAST_COMMIT_MESSAGE" value="коммит на проверку" />
   </component>
 </project>
