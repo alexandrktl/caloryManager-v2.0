@@ -7,8 +7,22 @@ public class Main {
 
         System.out.println("Вас приветствует менеджер каллорий ;)");
         printMenu();
-        StepTracker.menuChoise();
-        System.out.println("Программа завершена.");
+        int userInput  = scanner.nextInt();
+        while (userInput!=0){
+
+             if (userInput==1) {
+                 StepTracker.menu1();
+             } else if (userInput==3){
+                 StepTracker.menu3();
+             }
+              else if ( userInput!=1  && userInput!=2  && userInput!=3 ) {    // Ради одной фразы создавать новый метод не вижу смысла РЕВЬЮЕРУ
+                     System.out.println("Введите правильную команду !");
+                 }else {
+                  StepTracker.menu2();// Статистика
+             }
+            printMenu();
+            userInput=scanner.nextInt();
+        }System.out.println("Программа завершена.");
 
     }
     public static void printMenu(){

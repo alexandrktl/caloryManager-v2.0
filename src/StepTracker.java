@@ -3,6 +3,7 @@ import java.util.Scanner;
 
 public  class StepTracker {
     Convertor convertorOfKMandKKAL=new Convertor();
+    Scanner scanner= new Scanner(System.in);
     int poinSteps = 10000; // целевое количество шагов
 
     int changePoinSteps(int newPoints) {
@@ -91,78 +92,55 @@ public  class StepTracker {
         }
         return maxMaxima;
     }
-
-    void menuChoise() {
-
-        Scanner scanner=new Scanner(System.in);
-        int userMainMenuInput = scanner.nextInt();
-        while (userMainMenuInput != 0) {
-
-            if (userMainMenuInput == 1) {    // добавлю switch после прохождения данной темы РЕВ
-                System.out.println("За какой месяц вы хотите ввести шаги? 0-Январь, 1-Февраль...11-Декабрь");
-                int month = scanner.nextInt();
-
-
-                while (month < 0 || month > 11) {
-                    System.out.println("Неверно введен месяц!");
-                    System.out.println("За какой месяц вы хотите ввести шаги? 0-Январь, 1-Февраль...11-Декабрь");
-                    month = scanner.nextInt();
-                }
-                System.out.println("За какой день вы хотите ввести шаги?");
-                int day = scanner.nextInt() - 1;
-                while (day < 0 || day > 29) {
-                    System.out.println("Неверно введен день! Введите дату от 1 до 30");
-                    System.out.println("За какой день вы хотите ввести шаги?");
-                    day = scanner.nextInt();
-                }
-                System.out.println("Введите количество шагов: ____");
-                int steps = scanner.nextInt();
-                while (steps < 0) {
-                    System.out.println("Отрицательное количество шагов недопустимо");
-                    System.out.println("Введите количество шагов: ____");
-                    steps = scanner.nextInt();
-                }
-                inputSteps(month, day, steps);
-
-            } else if (userMainMenuInput == 3) {
-                System.out.println("Введите новую цель");
-                int newPoit = scanner.nextInt();
-
-                while (newPoit < 0) {
-                    System.out.println("Отрицательное количество шагов недопустимо");
-                    System.out.println("Введите количество шагов для новой цели: ____");
-                    newPoit = scanner.nextInt();
-                }
-               changePoinSteps(newPoit);
-            } else if (userMainMenuInput != 1 && userMainMenuInput != 2 && userMainMenuInput != 3) {
-                System.out.println("Введите правильную команду !");
-            } else {                                                             // Статистика
-                System.out.println("За какой месяц вывести статистику? 0-Январь, 1-Февраль...11-Декабрь");
-                int monthStatistic = scanner.nextInt();
-                while (monthStatistic < 0 || monthStatistic > 11) {
-                    System.out.println("Неверно выбран месяц! ");
-                    System.out.println("За какой месяц вывести статистику? 0-Январь, 1-Февраль...11-Декабрь");
-                    monthStatistic = scanner.nextInt();
-                }
-                showStatistic(monthStatistic);
-            }
-            Main.printMenu();
-            userMainMenuInput = scanner.nextInt();
-
-        }
+void menu1(){
+    System.out.println("За какой месяц вы хотите ввести шаги? 0-Январь, 1-Февраль...11-Декабрь");
+    int month = scanner.nextInt();
+    while (month<0 || month>11){
+        System.out.println("Неверно введен месяц!");
+        System.out.println("За какой месяц вы хотите ввести шаги? 0-Январь, 1-Февраль...11-Декабрь");
+        month = scanner.nextInt();
     }
+    System.out.println("За какой день вы хотите ввести шаги?");
+    int day = scanner.nextInt()-1;
+    while (day<0 || day>29){
+        System.out.println("Неверно введен день! Введите дату от 1 до 30");
+        System.out.println("За какой день вы хотите ввести шаги?");
+        day = scanner.nextInt();
+    }
+    System.out.println("Введите количество шагов: ____");
+    int steps = scanner.nextInt();
+    while (steps<0){
+        System.out.println("Отрицательное количество шагов недопустимо");
+        System.out.println("Введите количество шагов: ____");
+        steps = scanner.nextInt();
+    }
+    inputSteps(month,day,steps);
+
+}
+void menu3(){
+    System.out.println("Введите новую цель");
+    int newPoit= scanner.nextInt();
+
+    while (newPoit<0){
+        System.out.println("Отрицательное количество шагов недопустимо");
+        System.out.println("Введите количество шагов для новой цели: ____");
+        newPoit = scanner.nextInt();
+    } changePoinSteps(newPoit);
+}
+void menu2(){
+    System.out.println("За какой месяц вывести статистику? 0-Январь, 1-Февраль...11-Декабрь");
+    int monthStatistic=scanner.nextInt();
+    while (monthStatistic<0 || monthStatistic>11){
+        System.out.println("Неверно выбран месяц! ");
+        System.out.println("За какой месяц вывести статистику? 0-Январь, 1-Февраль...11-Декабрь");
+        monthStatistic = scanner.nextInt();
+    }
+    showStatistic(monthStatistic);
+}
+
 }
 
 
-
-
-
-
-//    Сохранение количества шагов за день. Пользователь должен указать номер месяца (начиная с 0), номер дня и количе
-//    ство шагов, пройденных в этот день. Количество
-//    шагов должно быть неотрицательным. Для ускорения прототипирования на данном этапе считается, что в месяце ровно
-//    30 дне
-//        й. Если за какой-то день статистика не сохранялась, то считаем количество шагов в этот день равным 0.
 
 
 
